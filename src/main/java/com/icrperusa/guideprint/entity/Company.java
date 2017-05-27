@@ -13,7 +13,7 @@ public class Company {
 
     private String companyname;
 
-
+    public Company(){}
 
     @Override
     public String toString() {

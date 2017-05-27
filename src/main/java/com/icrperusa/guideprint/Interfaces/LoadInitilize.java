@@ -3,7 +3,8 @@
  */
 package com.icrperusa.guideprint.Interfaces;
 
-import java.util.List;
+import javafx.collections.ObservableList;
+import javafx.util.StringConverter;
 
 /**
  * @author christian
@@ -11,6 +12,14 @@ import java.util.List;
  */
 public interface LoadInitilize {
 
-    public List<?> load();
+    /*
+     * method for load initialize data combobox
+     * */
+    public ObservableList<?> LoadCombo();
+
+    /*
+     * method for parse object to string
+     * */
+    public StringConverter<?> LabelCombo();
 
 }

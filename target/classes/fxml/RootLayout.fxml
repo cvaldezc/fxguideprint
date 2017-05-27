@@ -6,8 +6,7 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="300.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<BorderPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icrperusa.guideprint.viewcontroller.AppViewController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -15,7 +14,7 @@
             <items>
                   <MenuItem mnemonicParsing="false" text="Limpiar" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-              <MenuItem mnemonicParsing="false" text="Salir" />
+              <MenuItem fx:id="smbclose" mnemonicParsing="false" onAction="#handCloseApp" text="Salir" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Acción">
