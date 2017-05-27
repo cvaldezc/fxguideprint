@@ -23,7 +23,6 @@ public class CompanyController extends Company implements LoadInitilize {
         super(companyid, companyname);
     }
 
-    @Override
     public List<Company> load() {
         List<Company> _list =  new ArrayList<Company>();
         _list.add(new Company("20428776110", "ICR PERU"));

@@ -15,6 +15,11 @@ public class Company {
 
 
 
+    @Override
+    public String toString() {
+        return "Company [companyid=" + companyid + ", companyname=" + companyname + "]";
+    }
+
     public Company(String companyid, String companyname) {
         this.companyid = companyid;
         this.companyname = companyname;

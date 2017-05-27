@@ -5,6 +5,8 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.icrperusa.guideprint.viewcontroller.GuidesViewControlller;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -53,7 +55,15 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             String fxmlGuide = "/fxml/FMGuides.fxml";
             AnchorPane fmguides = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlGuide));
+            // show in the parent form
             rootLayout.setCenter(fmguides);
+            
+            // add controller
+            System.out.println("Loader controller");
+            GuidesViewControlller controller = loader.getController();
+            System.out.println("set controller in app");
+            controller.setMainApp(this);
+            
         } catch (IOException ex) {
             log.info("Error WHEN SHOW GUIDE PRINT: ".concat(ex.getMessage()));
         }
