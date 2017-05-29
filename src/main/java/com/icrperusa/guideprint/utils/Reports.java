@@ -40,7 +40,6 @@ public class Reports extends SettingsMasterController {
                 JasperReport master = (JasperReport) JRLoader.loadObjectFromFile(jasper);
                 System.out.println("Object process");
                 vprint = JasperFillManager.fillReport(master, parameter, xcon);
-
             }
         } catch (Exception e) {
             Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, e);

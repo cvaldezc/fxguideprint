@@ -83,13 +83,14 @@ public class GuidesViewController {
             System.out.println("YEAH if only ENTER");
             Company item = cbocompany.getSelectionModel().getSelectedItem();
             if (item != null) {
+                // get parameters
                 String path = getClass().getResource("/").getPath();
                 Map<String, Object> parameter = new HashMap<String, Object>();
-                parameter.put("Param_cod", numberguide.getText());
-                parameter.put("SUBREPORT_DIR", path.concat("reports/"));
+                parameter.put("GUIDEID", numberguide.getText());
+                parameter.put("SOURCEPATH", path.concat("reports/"));
                 // guidematerialsrpt
                 log.info("Name file: ".concat(path));
-                JasperPrint dprint = new Reports(item.getCompanyid()).getReportcn(path.concat("reports/Blank_A4_1.jasper"), parameter);
+                JasperPrint dprint = new Reports(item.getCompanyid()).getReportcn(path.concat("reports/guideremision.jasper"), parameter);
                 JasperViewer view =  new JasperViewer(dprint, false);
                 view.setAlwaysOnTop(true);
                 view.setVisible(true);
