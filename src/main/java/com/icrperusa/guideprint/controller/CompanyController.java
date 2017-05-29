@@ -51,7 +51,7 @@ public class CompanyController extends Company implements LoadInitilize {
                 return null;
             }
         };
-
     }
+
 
 }

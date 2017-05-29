@@ -3,11 +3,13 @@
  */
 package com.icrperusa.guideprint.entity;
 
+import com.icrperusa.guideprint.controller.SettingsMasterController;
+
 /**
  * @author Christian
  *
  */
-public class Company {
+public class Company extends SettingsMasterController {
 
     private String companyid;
 
