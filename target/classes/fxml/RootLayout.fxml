@@ -4,6 +4,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icrperusa.guideprint.viewcontroller.AppViewController">
@@ -12,15 +13,27 @@
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Limpiar" />
+                  <MenuItem fx:id="stbclean" mnemonicParsing="false" text="Limpiar">
+                     <graphic>
+                        <ImageView fx:id="ivclear" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
                   <SeparatorMenuItem mnemonicParsing="false" />
-              <MenuItem fx:id="smbclose" mnemonicParsing="false" onAction="#handCloseApp" text="Salir" />
+              <MenuItem fx:id="stbclose" mnemonicParsing="false" onAction="#handCloseApp" text="Salir">
+                     <graphic>
+                        <ImageView fx:id="ivclose" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Acción">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Ultima Guia" />
-              <MenuItem mnemonicParsing="false" text="Reporte" />
+                  <MenuItem mnemonicParsing="false" text="Ultima Guia">
+                     <graphic>
+                        <ImageView fx:id="ivlast" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
+              <MenuItem mnemonicParsing="false" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="ivreport" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Acerca" />

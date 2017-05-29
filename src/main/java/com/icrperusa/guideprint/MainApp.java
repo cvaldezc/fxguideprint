@@ -45,6 +45,7 @@ public class MainApp extends Application {
             log.info("LAYOUT ROOT ERROR: ".concat(ex.getMessage()));
         }
     }
+    
     /*
      * Show the Guide layout inside the root layout
      * */

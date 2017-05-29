@@ -4,7 +4,7 @@
 package com.icrperusa.guideprint.entity;
 
 /**
- * @author christian
+ * @author Christian
  *
  */
 public class Company {

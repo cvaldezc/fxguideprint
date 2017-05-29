@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icrperusa.guideprint.viewcontroller.GuidesViewControlller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icrperusa.guideprint.viewcontroller.GuidesViewController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="384.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="25.0" layoutY="28.0" text="Guias de Remisión">

@@ -3,7 +3,7 @@
  */
 package com.icrperusa.guideprint.viewcontroller;
 
-import com.icrperusa.guideprint.MainApp;
+// import com.icrperusa.guideprint.MainApp;
 import com.icrperusa.guideprint.controller.CompanyController;
 import com.icrperusa.guideprint.entity.Company;
 
@@ -16,10 +16,10 @@ import javafx.scene.control.TextField;
  * @author christian
  *
  */
-public class GuidesViewControlller {
+public class GuidesViewController {
 
     // define FX Controls
-    private MainApp mainapp;
+    // private MainApp mainapp;
     @FXML
     private TextField numberguide;
 
@@ -52,7 +52,7 @@ public class GuidesViewControlller {
 
     private void cboComboBox_changeSelected(ObservableValue<?> observable, Object oldValue, Object newValue) {
         Company val = (Company) newValue;
-        String selectionText = "Price of the " + val.getCompanyid() + " is : " + val.getCompanyname();
-        System.out.println(selectionText);
+        //String selectionText = "Price of the " + val.getCompanyid() + " is : " + val.getCompanyname();
+        //System.out.println(selectionText);
     }
 }
