@@ -13,7 +13,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
-                  <MenuItem fx:id="stbclean" mnemonicParsing="false" text="Limpiar">
+                  <MenuItem fx:id="stbclean" mnemonicParsing="false" text="Limpiar" visible="false">
                      <graphic>
                         <ImageView fx:id="ivclear" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic></MenuItem>
@@ -24,7 +24,7 @@
                      </graphic></MenuItem>
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Acción">
+          <Menu mnemonicParsing="false" text="Acción" visible="false">
             <items>
                   <MenuItem mnemonicParsing="false" text="Ultima Guia">
                      <graphic>
@@ -36,7 +36,7 @@
                      </graphic></MenuItem>
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Acerca" />
+          <Menu mnemonicParsing="false" text="Acerca" visible="false" />
         </menus>
       </MenuBar>
    </top>

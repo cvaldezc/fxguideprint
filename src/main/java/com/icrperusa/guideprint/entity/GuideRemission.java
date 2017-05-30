@@ -33,6 +33,23 @@ public class GuideRemission extends SettingsMasterController {
     private String month;
     private String day;
 
+
+
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return "GuideRemission [guideid=" + guideid + ", suppliername=" + suppliername + ", supplierid=" + supplierid
+                + ", dotarrival=" + dotarrival + ", dotout=" + dotout + ", traslate=" + traslate + ", trasuppliername="
+                + trasuppliername + ", trasupplierid=" + trasupplierid + ", lisence=" + lisence + ", plate=" + plate
+                + ", brand=" + brand + ", status=" + status + ", inscription=" + inscription + ", observation="
+                + observation + ", projectid=" + projectid + ", projectname=" + projectname + ", orders=" + orders
+                + ", year=" + year + ", month=" + month + ", day=" + day + "]";
+    }
+
+
+
     /**
      * @return the year
      */
@@ -90,8 +107,8 @@ public class GuideRemission extends SettingsMasterController {
     // constructor principal
     public GuideRemission(){}
 
-    
-    
+
+
     /**
      * @return the orders
      */

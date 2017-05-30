@@ -57,6 +57,7 @@ public class Connect {
 
     public ResultSet ExecuteQuery(String query, Object[] params) throws SQLException
     {
+        System.out.println(query);
         ResultSet rs = null;
         PreparedStatement pstatement = null;
         Connection xcon = null;

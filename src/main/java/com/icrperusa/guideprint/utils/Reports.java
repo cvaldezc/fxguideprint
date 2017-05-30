@@ -31,7 +31,7 @@ public class Reports extends SettingsMasterController {
     }
 
     public JasperPrint getReportcn(String jasper, Map<String, Object> parameter) throws SQLException{
-        JasperPrint vprint = null;
+        JasperPrint vprint = new JasperPrint();
         Connection xcon = new Connect(this.getEnterprise()).Open();
         try {
             System.out.println("PATH COMPLETE JRXML " + jasper);
@@ -40,6 +40,7 @@ public class Reports extends SettingsMasterController {
                 JasperReport master = (JasperReport) JRLoader.loadObjectFromFile(jasper);
                 System.out.println("Object process");
                 vprint = JasperFillManager.fillReport(master, parameter, xcon);
+                System.out.println("finish report return");
             }
         } catch (Exception e) {
             Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, e);
