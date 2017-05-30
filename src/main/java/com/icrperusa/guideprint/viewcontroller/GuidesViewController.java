@@ -17,6 +17,7 @@ import org.controlsfx.control.Notifications;
 import com.icrperusa.guideprint.controller.CompanyController;
 import com.icrperusa.guideprint.controller.GuideRemissionController;
 import com.icrperusa.guideprint.entity.Company;
+import com.icrperusa.guideprint.entity.GuideRemission;
 import com.icrperusa.guideprint.utils.Reports;
 
 import javafx.application.Platform;
@@ -83,21 +84,39 @@ public class GuidesViewController {
             System.out.println("YEAH if only ENTER");
             Company item = cbocompany.getSelectionModel().getSelectedItem();
             if (item != null) {
-                // get parameters
-                String path = getClass().getResource("/").getPath();
-                Map<String, Object> parameter = new HashMap<String, Object>();
-                parameter.put("GUIDEID", numberguide.getText());
-                parameter.put("SOURCEPATH", path.concat("reports/"));
-                // guidematerialsrpt
-                log.info("Name file: ".concat(path));
-                JasperPrint dprint = new Reports(item.getCompanyid()).getReportcn(path.concat("reports/guideremision.jasper"), parameter);
-                JasperViewer view =  new JasperViewer(dprint, false);
-                view.setAlwaysOnTop(true);
-                view.setVisible(true);
-                ImageIcon icon = new ImageIcon(String.format("%simages/%s.png", path, numberguide.getText()));
-                view.setIconImage( icon.getImage() );
-                view.setExtendedState(JasperViewer.MAXIMIZED_BOTH);
-                view.setTitle("GUIA DE REMINISION ".concat(numberguide.getText()));
+                GuideRemission getbedside = new GuideRemissionController(item.getCompanyid()).bedsideReport(numberguide.getText());
+                if (getbedside != null) {
+                    String[] months = new String[]{ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre",};
+                    // get parameters
+                    String path = getClass().getResource("/").getPath();
+                    Map<String, Object> parameter = new HashMap<String, Object>();
+                    parameter.put("GUIDEID", numberguide.getText());
+                    parameter.put("SOURCEPATH", path.concat("reports/"));
+                    parameter.put("DOTSTART", getbedside.getDotout());
+                    parameter.put("DOTARRIVAL", getbedside.getDotarrival());
+                    parameter.put("SUPPLIERNAME", getbedside.getSuppliername());
+                    parameter.put("SUPPLIERID", getbedside.getSupplierid());
+                    parameter.put("DAY", getbedside.getDay());
+                    parameter.put("MONTH", months[Integer.valueOf(getbedside.getMonth()) - 1]);
+                    parameter.put("YEAR", getbedside.getYear());
+                    parameter.put("BRAND", getbedside.getBrand());
+                    parameter.put("PLATE", getbedside.getPlate());
+                    parameter.put("INSCRIPTION", getbedside.getInscription());
+                    parameter.put("LISENCE", getbedside.getLisence());
+                    parameter.put("TRASUPPLIERNAME", getbedside.getTrasuppliername());
+                    parameter.put("TRASUPPLIERID", getbedside.getTrasupplierid());
+                    parameter.put("PROJECT", String.format("%s - %s", getbedside.getProjectid(), getbedside.getProjectname()));
+                    parameter.put("ORDERS", getbedside.getOrders());
+                    log.info("Name file: ".concat(path));
+                    JasperPrint dprint = new Reports(item.getCompanyid()).getReportcn(path.concat("reports/guideremision.jasper"), parameter);
+                    JasperViewer view =  new JasperViewer(dprint, false);
+                    view.setAlwaysOnTop(true);
+                    view.setVisible(true);
+                    ImageIcon icon = new ImageIcon(String.format("%simages/%s.png", path, numberguide.getText()));
+                    view.setIconImage( icon.getImage() );
+                    view.setExtendedState(JasperViewer.MAXIMIZED_BOTH);
+                    view.setTitle("GUIA DE REMINISION ".concat(numberguide.getText()));
+                }
             }
         }
     }

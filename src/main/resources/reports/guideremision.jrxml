@@ -101,7 +101,6 @@
 	</parameter>
 	<parameter name="SOURCEPATH" class="java.lang.String">
 		<parameterDescription><![CDATA[]]></parameterDescription>
-		<defaultValueExpression><![CDATA["/home/juan/JaspersoftWorkspace/MyReports/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="DOTSTART" class="java.lang.String"/>
 	<parameter name="DOTARRIVAL" class="java.lang.String"/>

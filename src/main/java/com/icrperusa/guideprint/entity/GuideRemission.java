@@ -26,9 +26,109 @@ public class GuideRemission extends SettingsMasterController {
     private String status;
     private String inscription;
     private String observation;
+    private String projectid;
+    private String projectname;
+    private String orders;
+    private String year;
+    private String month;
+    private String day;
+
+    /**
+     * @return the year
+     */
+    public String getYear() {
+        return year;
+    }
+
+
+
+    /**
+     * @param year the year to set
+     */
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+
+
+    /**
+     * @return the month
+     */
+    public String getMonth() {
+        return month;
+    }
+
+
+
+    /**
+     * @param month the month to set
+     */
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+
+
+    /**
+     * @return the day
+     */
+    public String getDay() {
+        return day;
+    }
+
+
+
+    /**
+     * @param day the day to set
+     */
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+
 
     // constructor principal
     public GuideRemission(){}
+
+    
+    
+    /**
+     * @return the orders
+     */
+    public String getOrders() {
+        return orders;
+    }
+
+    /**
+     * @param orders the orders to set
+     */
+    public void setOrders(String orders) {
+        this.orders = orders;
+    }
+
+
+
+    public String getProjectid() {
+        return projectid;
+    }
+
+
+    public void setProjectid(String projectid) {
+        this.projectid = projectid;
+    }
+
+
+    public String getProjectname() {
+        return projectname;
+    }
+
+
+
+    public void setProjectname(String projectname) {
+        this.projectname = projectname;
+    }
+
+
 
     /**
      * @return the guideid
