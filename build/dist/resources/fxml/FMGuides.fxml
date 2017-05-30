@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icrperusa.guideprint.viewcontroller.GuidesViewController">
+   <children>
+      <ImageView fx:id="ivcompany" fitHeight="100.0" fitWidth="150.0" layoutX="381.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: black; -fx-border-type: solid; -fx-border-width: 1;" />
+      <Label layoutX="25.0" layoutY="10.0" text="Guias de Remisión">
+         <font>
+            <Font name="Arial" size="25.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="pgaction" disable="true" layoutX="10.0" layoutY="181.0" prefHeight="20.0" prefWidth="521.0" />
+      <ComboBox fx:id="cbocompany" layoutX="23.0" layoutY="70.0" prefHeight="26.0" prefWidth="349.0" />
+      <TextField fx:id="numberguide" layoutX="25.0" layoutY="108.0" onKeyPressed="#numberguideKeypress" prefHeight="32.0" prefWidth="176.0" promptText="000-00000000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="searchlatest" layoutX="211.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleEventSearchLatest" prefHeight="32.0" prefWidth="159.0" text="Ultima Guia Remisión" />
+      <Label layoutX="25.0" layoutY="45.0" text="Empresa:" />
+   </children>
+</AnchorPane>
