@@ -58,7 +58,9 @@ public class GuideRemissionController extends GuideRemission {
                     "g.status, " +
                     "g.observation, " +
                     "pr.proyecto_id, " +
-                    "pr.nompro " +
+                    "pr.nompro, " +
+                    "pv.pronom, " +
+                    "ds.distnom " +
                     " FROM almacen_guiaremision g " +
                     "INNER JOIN home_cliente ct " +
                     "ON ct.ruccliente_id = g.ruccliente_id " +
@@ -72,6 +74,10 @@ public class GuideRemissionController extends GuideRemission {
                     "ON tr.traruc_id = tp.traruc_id AND tp.nropla_id = g.nropla_id " +
                     "INNER JOIN home_conductore cd " +
                     "ON tr.traruc_id = cd.traruc_id AND cd.condni_id = g.condni_id "+
+                    "INNER JOIN home_provincia pv " +
+                    "ON pr.provincia_id = pv.provincia_id "+
+                    "INNER JOIN home_distrito ds " +
+                    "ON pr.distrito_id = ds.distrito_id and ds.provincia_id = pr.provincia_id "+
                     "WHERE g.guia_id = ? LIMIT 1 OFFSET 0;";
             ResultSet rs = new Connect(getEnterprise()).ExecuteQuery(xquery, new Object[]{ nguide });
             while (rs.next()) {
@@ -79,7 +85,7 @@ public class GuideRemissionController extends GuideRemission {
                 object.setGuideid(rs.getString("guia_id"));
                 object.setSuppliername(rs.getString("razonsocial"));
                 object.setSupplierid(rs.getString("ruccliente_id"));
-                object.setDotarrival(rs.getString("puntollegada"));
+                object.setDotarrival(String.format("%s ", rs.getString("puntollegada")));
                 object.setDotout(rs.getString("dotoutput"));
                 object.setTraslate(rs.getString("traslado"));
                 object.setYear(rs.getString("anio"));

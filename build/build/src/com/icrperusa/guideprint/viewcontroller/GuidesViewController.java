@@ -51,6 +51,7 @@ public class GuidesViewController {
         cbocompany.setItems(new CompanyController().LoadCombo());
         cbocompany.valueProperty().addListener(new ChangeListener() {
 
+            @Override
             public void changed(ObservableValue obs, Object oldval, Object newval) {
                 cboComboBox_changeSelected(obs, oldval, newval);
             }
@@ -72,6 +73,7 @@ public class GuidesViewController {
             numberguide.setText(guide);
             Platform.runLater(new Runnable() {
 
+                @Override
                 public void run() {
                     numberguide.requestFocus();
                 }
@@ -89,6 +91,7 @@ public class GuidesViewController {
             ivcompany.setImage(new Image(getClass().getResourceAsStream(String.format("/images/%s.png", _com.getCompanyid()))));
             Platform.runLater(new Runnable() {
 
+                @Override
                 public void run() {
                     numberguide.requestFocus();
                 }
@@ -132,7 +135,7 @@ public class GuidesViewController {
                         //
                         JasperPrint dprint = new Reports(item.getCompanyid()).getReportcn(path.concat("reports/guideremision.jasper"), parameter);
                         JasperViewer view =  new JasperViewer(dprint, false);
-                        view.setAlwaysOnTop(true);
+                        //view.setAlwaysOnTop(true);
                         view.setVisible(true);
                         ImageIcon icon = new ImageIcon(String.format("%simages/%s.png", path, numberguide.getText()));
                         view.setIconImage( icon.getImage() );

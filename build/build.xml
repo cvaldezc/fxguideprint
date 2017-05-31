@@ -423,12 +423,14 @@
 		<fx:resources id="appRes">
 			<fx:fileset dir="dist" includes="guideprint.jar"/>
 			<fx:fileset dir="dist" includes="libs/*"/>
+			<fx:fileset dir="dist" includes="resources/**"/>
 		</fx:resources>
 	
 		<fx:application id="fxApplication"
 			name="ReportGuideMaterials"
 			mainClass="com.icrperusa.guideprint.MainApp"
 			toolkit="fx"
+			version="0.5.0-alpha"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />

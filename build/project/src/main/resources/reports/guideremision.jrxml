@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
-<!-- 2017-05-30T14:40:01 -->
+<!-- 2017-05-31T08:52:54 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GuideRemission" pageWidth="595" pageHeight="847" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8f04b5cd-c6cd-4e98-819a-790098fc4c49">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -379,20 +379,28 @@ ORDER BY m.matnom ASC]]>
 			</textField>
 		</band>
 	</detail>
-	<columnFooter>
-		<band height="55" splitType="Stretch">
-			<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+	<summary>
+		<band height="50">
 			<textField isStretchWithOverflow="true">
-				<reportElement x="250" y="10" width="304" height="12" uuid="980148f0-07a2-479d-986b-d538ae821d38">
+				<reportElement x="251" y="25" width="314" height="12" uuid="849e15f8-d957-4338-8668-86ddffa2c09e">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Arial" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{PROJECT}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{ORDERS}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="188" y="10" width="62" height="12" uuid="bcba9598-c21e-46dc-a2a9-bba47d540026">
+				<reportElement x="192" y="25" width="50" height="12" uuid="ebbde86d-fb88-41bd-86b3-c66f04893666">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEDIDOS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="5" width="62" height="12" uuid="bcba9598-c21e-46dc-a2a9-bba47d540026">
 					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
@@ -402,23 +410,14 @@ ORDER BY m.matnom ASC]]>
 				<text><![CDATA[PROYECTO:]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="249" y="30" width="314" height="12" uuid="849e15f8-d957-4338-8668-86ddffa2c09e">
+				<reportElement x="252" y="5" width="304" height="12" uuid="980148f0-07a2-479d-986b-d538ae821d38">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Arial" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{ORDERS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{PROJECT}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="190" y="30" width="50" height="12" uuid="ebbde86d-fb88-41bd-86b3-c66f04893666">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
-				<textElement>
-					<font fontName="Arial" isBold="true"/>
-				</textElement>
-				<text><![CDATA[PEDIDOS:]]></text>
-			</staticText>
 		</band>
-	</columnFooter>
+	</summary>
 </jasperReport>
