@@ -5,7 +5,6 @@
 			<filelist>
 				<file name="${java.home}\..\lib\ant-javafx.jar"/>
 				<file name="${java.home}\lib\jfxrt.jar"/>
-				<file name="${basedir}"/>
 			</filelist>
 		</path>
 	
@@ -289,12 +288,12 @@
 		</copy>
 		<copy todir="project">
 			<fileset dir="/home/christian/development/java/guideprint">
-				<include name="src/test/java/**" />
+				<include name="src/main/resources/**" />
 			</fileset>
 		</copy>
 		<copy todir="project">
 			<fileset dir="/home/christian/development/java/guideprint">
-				<include name="src/main/resources/**" />
+				<include name="src/test/java/**" />
 			</fileset>
 		</copy>
 	
@@ -423,14 +422,12 @@
 		<fx:resources id="appRes">
 			<fx:fileset dir="dist" includes="guideprint.jar"/>
 			<fx:fileset dir="dist" includes="libs/*"/>
-			<fx:fileset dir="dist" includes="resources/**"/>
 		</fx:resources>
 	
 		<fx:application id="fxApplication"
 			name="ReportGuideMaterials"
 			mainClass="com.icrperusa.guideprint.MainApp"
 			toolkit="fx"
-			version="0.5.0-alpha"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />
@@ -457,7 +454,7 @@
 		<fx:deploy
 			embedJNLP="false"
 			extension="false"
-			includeDT="false"
+			includeDT="true"
 			offlineAllowed="true"
 			outdir="${basedir}/deploy"
 			outfile="guideprint" nativeBundles="none"

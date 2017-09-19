@@ -137,7 +137,7 @@ public class GuidesViewController {
                         JasperViewer view =  new JasperViewer(dprint, false);
                         //view.setAlwaysOnTop(true);
                         view.setVisible(true);
-                        ImageIcon icon = new ImageIcon(String.format("%simages/%s.png", path, numberguide.getText()));
+                        ImageIcon icon = new ImageIcon(String.format("%simages/%s.png", path, item.getCompanyid()));
                         view.setIconImage( icon.getImage() );
                         view.setExtendedState(JasperViewer.MAXIMIZED_BOTH);
                         view.setTitle("GUIA DE REMINISION ".concat(numberguide.getText()));
